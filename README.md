@@ -1,5 +1,5 @@
 # Pitt NSBE chapter website
- # testing if recieving telecomm edits
+ # testing
 Static site for the Pitt chapter of the National Society of Black Engineers.
 No build step, no framework &mdash; plain HTML/CSS/JS, ready for GitHub Pages.
 
