@@ -286,17 +286,12 @@ section.tight{padding:40px 0;}
 .card .meta{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--rust);letter-spacing:0.5px;}
 
 .photo-block{
+  width:100%;
   aspect-ratio:1/1;
+  object-fit:cover;
+  display:block;
   background:var(--paper);
   border:1px solid var(--paper-line);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:'Space Mono',monospace;
-  font-size:0.7rem;
-  color:#8a8578;
-  text-transform:uppercase;
-  letter-spacing:1px;
   margin-bottom:14px;
 }
 
