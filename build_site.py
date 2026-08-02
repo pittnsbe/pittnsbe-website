@@ -431,7 +431,7 @@ programs_body = hero(
     <div class="grid cols-3">
       <div class="card"><span class="tag">Academic</span><h3>AEX</h3><p>Academic Excellence &mdash; [placeholder description].</p><a href="programs-aex.html">Learn more &rarr;</a></div>
       <div class="card"><span class="tag rust">Mentorship</span><h3>Mentor-mentee</h3><p>[Placeholder description.]</p><a href="programs-mentor-mentee.html">Learn more &rarr;</a></div>
-      <div class="card"><span class="tag mustard">Community</span><h3>Freshman reps</h3><p>[Placeholder description.]</p><a href="programs-freshman-reps.html">Learn more &rarr;</a></div>
+      <div class="card"><span class="tag mustard">Community</span><h3>Freshman Reps</h3><p>[Placeholder description.]</p><a href="programs-freshman-reps.html">Learn more &rarr;</a></div>
     </div>
   </div>
 </section>
@@ -468,7 +468,7 @@ programs_aex_body = program_page("Programs &middot; Academic", "AEX &mdash; Acad
 programs_mentor_body = program_page("Programs &middot; Mentorship", "Mentor-mentee program",
     "Pairing upperclassmen with underclassmen for guidance, support, and community.", "Mentor-mentee coordinator")
 programs_freshman_body = program_page("Programs &middot; Community", "Freshman representatives",
-    "First-year members who represent their class and help plan programming for new students.", "Freshman rep coordinator")
+    "First-year members who represent their class and help plan programming for new students.", "Freshman Rep coordinator")
 
 # ============================================================= HIDDEN PAGES
 
@@ -573,8 +573,8 @@ pages = {
     "membership.html": ("Membership", "membership.html", membership_body, "How to join Pitt NSBE, alumni network, and conferences.", False),
     "programs.html": ("Programs", "programs.html", programs_body, "Pitt NSBE programs overview.", False),
     "programs-aex.html": ("AEX", "programs.html", programs_aex_body, "Academic Excellence program.", False),
-    "programs-mentor-mentee.html": ("Mentor-mentee", "programs.html", programs_mentor_body, "Mentor-mentee program.", False),
-    "programs-freshman-reps.html": ("Freshman reps", "programs.html", programs_freshman_body, "Freshman representatives program.", False),
+    "programs-mentor-mentee.html": ("Mentor-Mentee", "programs.html", programs_mentor_body, "Mentor-Mentee program.", False),
+    "programs-freshman-reps.html": ("Freshman Representatives", "programs.html", programs_freshman_body, "Freshman Representatives Program.", False),
     "donation.html": ("Donate", "donation.html", donation_body, "Support the Pitt NSBE chapter.", True),
     "sponsorship.html": ("Sponsorship", "sponsorship.html", sponsorship_body, "Partner with the Pitt NSBE chapter.", True),
     "newsletter.html": ("Newsletter archive", "newsletter.html", newsletter_body, "Pitt NSBE newsletter archive.", True),

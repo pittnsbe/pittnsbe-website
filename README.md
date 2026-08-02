@@ -12,8 +12,8 @@ No build step, no framework &mdash; plain HTML/CSS/JS, ready for GitHub Pages.
 - `membership.html` &mdash; Membership: steps to join, alumni network, announcements, conferences
 - `programs.html` (+ dropdown) &mdash; Programs: overview, plus dedicated pages for:
   - `programs-aex.html` &mdash; AEX chair
-  - `programs-mentor-mentee.html` &mdash; Mentor-mentee
-  - `programs-freshman-reps.html` &mdash; Freshman reps
+  - `programs-mentor-mentee.html` &mdash; Mentor-Mentee
+  - `programs-freshman-reps.html` &mdash; Freshman Reps
 
 **Hidden pages** (linked from the footer only, not the main nav &mdash; marked `noindex` so search
 engines don't surface them ahead of your main pages, but they're fully public if someone has the link):
