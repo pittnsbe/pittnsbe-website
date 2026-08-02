@@ -12,8 +12,8 @@ MAIN_NAV = [
 PROGRAMS_DROPDOWN = [
     ("programs.html", "About"),
     ("programs-aex.html", "AEX chair"),
-    ("programs-mentor-mentee.html", "Mentor-mentee"),
-    ("programs-freshman-reps.html", "Freshman reps"),
+    ("programs-mentor-mentee.html", "Mentor-Mentee"),
+    ("programs-freshman-reps.html", "Freshman Representative"),
 ]
 
 HIDDEN_PAGES = [
