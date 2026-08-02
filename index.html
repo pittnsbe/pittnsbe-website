@@ -97,15 +97,20 @@
         <span class="eyebrow">Spotlight</span>
         <h2>Member of the month</h2>
       </div>
-      <div style="display:flex;flex-wrap:wrap;align-items:stretch;border:1px solid var(--paper-line);background:var(--white);">
-        <div><img class="photo-block" src="headshots/Coming Soon.jpg" alt="none" style="flex:1 1 340px;max-height:300px;height:auto;aspect-ratio:auto;margin-bottom:0;border:none;border-right:1px solid var(--paper-line);"> </div>
+      <div
+        style="display:flex;flex-wrap:wrap;align-items:stretch;border:1px solid var(--paper-line);background:var(--white);">
+        <div><img class="photo-block" src="headshots/Coming Soon.jpg" alt="none"
+            style="flex:1 1 340px;max-height:300px;height:auto;aspect-ratio:auto;margin-bottom:0;border:none;border-right:1px solid var(--paper-line);">
+        </div>
         <div style="flex:1 1 380px;padding:40px;display:flex;flex-direction:column;justify-content:center;">
           <span class="tag mustard" style="align-self:flex-start;">Member of the month</span>
           <h3 style="font-size:2rem;">To Be Announced</h3>
           <p class="meta">Student Year &middot; Student Major<!--[Year] &middot; [Major]--></p>
-          <p>Each month, we will recognize a member of NSBE for their work within our chapter. Check back here every month to learn more about why the chosen member is being recognized.
+          <p>Each month, we will recognize a member of NSBE for their work within our chapter. Check back here every
+            month to learn more about why the chosen member is being recognized.
             <!--Commented: [Placeholder: a short highlight &mdash; what this member has been working on, an award, a project, or why
-            they were nominated.]--></p>
+            they were nominated.]-->
+          </p>
         </div>
       </div>
     </div>
@@ -155,15 +160,19 @@
           <div class="card"><span class="tag rust">Interest</span>
             <h3>Involvement Fair</h3>
             <p class="meta">Sunday, August 23 &middot; Petersen Events Center</p>
-            <p>Come find us at the Involvement Fair at the Petersen Events Center from 1-4 PM to learn more about our organization!
-              Lean more about getting involved with our chapter and some of the events that we plan on hosting this year. Make sure to be there!
+            <p>Come find us at the Involvement Fair at the Petersen Events Center from 1-4 PM to learn more about our
+              organization!
+              Lean more about getting involved with our chapter and some of the events that we plan on hosting this
+              year. Make sure to be there!
             </p>
           </div>
           <div class="card"><span class="tag">GBM</span>
             <h3>First General Body Meeting</h3>
             <p class="meta">TBD &middot; TBD</p>
-            <p>Keep an eye out on our <a href="https://www.instagram.com/pitt_nsbe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
-              for information on our first General Body Meeting for the semester! We are super excited to meet any newcomers and returning members!
+            <p>Keep an eye out on our <a
+                href="https://www.instagram.com/pitt_nsbe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+              for information on our first General Body Meeting for the semester! We are super excited to meet any
+              newcomers and returning members!
             </p>
           </div>
         </div>
@@ -199,7 +208,8 @@
           <div class="card">
             <span class="tag">August, 2026</span>
             <h3>Welcome In and Welcome Back!</h3>
-            <p>Learn more about our Welcome Cookout August 22nd, what our E-Board has been up to this summer, and our new committees!</p>
+            <p>Learn more about our Welcome Cookout August 22nd, what our E-Board has been up to this summer, and our
+              new committees!</p>
             <a href="newsletters/August2026.pdf" target="_blank">Read the full issue &rarr;</a>
             <br />
             <a href="newsletter.html">Check out our archive &rarr;</a>
@@ -281,8 +291,15 @@
           <p>Phone: 703-549-2207<br>Email: <a href="mailto:membership@nsbe.org">membership@nsbe.org</a></p>
         </div>
       </div>
-      <form action="mailto:publications.pittnsbe@gmail.com" method="post" enctype="text/plain"
-        style="margin-top:36px;max-width:560px;">
+
+      <!-- form to send to https://script.google.com/macros/s/AKfycbzuCiwC8Fn8DdwNFXjEhxI9z-VA_QFYY_0JZyAAIa8i51FiUP8Oa0Be5FRlP1hA0Q_rvQ/exec-->
+      <!--all of the information for the newsletter linking is found here: 
+            https://www.thebricks.com/resources/guide-how-to-send-html-form-data-to-google-sheets
+            however, some of the commas had to either be removed or replaced as semi-colons for the program to work-->
+
+      <!-- link is to google sheets page titled "Website Contact Us Form" in the google drive-->
+
+      <form name="contacting us">
         <label for="c-name" style="color:#fff;">Name</label>
         <input id="c-name" name="name" type="text" required>
         <label for="c-email" style="color:#fff;">Email</label>
@@ -291,6 +308,37 @@
         <textarea id="c-msg" name="message" required></textarea>
         <button class="btn" type="submit" style="margin-top:16px;">Send message</button>
       </form>
+      <p id="contact-form"></p>
+      <!-- using javascript to make submission message nicer! 
+             This code below prevents the submission of an email from redirecting/leaving the page-->
+      <script>
+        const form2 = document.forms['contacting us'];
+        const formMessage2 = document.getElementById('contact-form');
+
+        const SCRIPT_URL2 = 'https://script.google.com/macros/s/AKfycbwBzkp0fKs6wwoimPIFuyuUUCWdsDG2LCbnjaD9vH1feNxxSiebMyQF-0DlwcrGw7aBUw/exec';
+
+        form2.addEventListener('submit', e2 => {
+          e2.preventDefault();
+          formMessage2.textContent = 'Sending your message...';
+
+          fetch(SCRIPT_URL2, { method: 'POST', body: new FormData(form2) })
+            .then(response => response.json())
+            .then(data => {
+              if (data.result === 'success') {
+                formMessage2.textContent = 'Thank you for the message! We will get back to you as soon as possible!';
+                form2.reset();
+              } else {
+                throw new Error(data.error || 'Unknown error occured.');
+              }
+            })
+            .catch(error => {
+              formMessage2.textContent = `Error: ${error.message}`;
+              console.error('Error!', error.message);
+            });
+        });
+      </script>
+      <!--ending the javascript here!-->
+
     </div>
   </section>
 
