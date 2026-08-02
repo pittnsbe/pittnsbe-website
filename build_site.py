@@ -430,7 +430,7 @@ programs_body = hero(
   <div class="wrap">
     <div class="grid cols-3">
       <div class="card"><span class="tag">Academic</span><h3>AEX</h3><p>Academic Excellence &mdash; [placeholder description].</p><a href="programs-aex.html">Learn more &rarr;</a></div>
-      <div class="card"><span class="tag rust">Mentorship</span><h3>Mentor-mentee</h3><p>[Placeholder description.]</p><a href="programs-mentor-mentee.html">Learn more &rarr;</a></div>
+      <div class="card"><span class="tag rust">Mentorship</span><h3>Mentor-Mentee</h3><p>[Placeholder description.]</p><a href="programs-mentor-mentee.html">Learn more &rarr;</a></div>
       <div class="card"><span class="tag mustard">Community</span><h3>Freshman Reps</h3><p>[Placeholder description.]</p><a href="programs-freshman-reps.html">Learn more &rarr;</a></div>
     </div>
   </div>
@@ -465,8 +465,8 @@ def program_page(eyebrow, title, lead, chair_label):
 
 programs_aex_body = program_page("Programs &middot; Academic", "AEX &mdash; Academic Excellence",
     "Supporting members' academic success through study sessions, tutoring, and accountability.", "AEX Chair")
-programs_mentor_body = program_page("Programs &middot; Mentorship", "Mentor-mentee program",
-    "Pairing upperclassmen with underclassmen for guidance, support, and community.", "Mentor-mentee coordinator")
+programs_mentor_body = program_page("Programs &middot; Mentorship", "Mentor-Mentee program",
+    "Pairing upperclassmen with underclassmen for guidance, support, and community.", "Mentor-Mentee coordinator")
 programs_freshman_body = program_page("Programs &middot; Community", "Freshman representatives",
     "First-year members who represent their class and help plan programming for new students.", "Freshman Rep coordinator")
 
